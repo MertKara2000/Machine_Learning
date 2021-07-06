@@ -1,37 +1,19 @@
 #- imports
 import pandas as pd
 import numpy as np
-
-from sklearn.model_selection import train_test_split,ShuffleSplit,cross_val_score,GridSearchCV,StratifiedKFold,\
-                                    cross_val_predict
-
-from sklearn.metrics import confusion_matrix,make_scorer,accuracy_score,matthews_corrcoef,roc_auc_score,\
-                            recall_score,precision_score,plot_confusion_matrix,f1_score
-
-from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier,\
-                             BaggingClassifier,AdaBoostClassifier,ExtraTreesClassifier
-
+from sklearn.model_selection import train_test_split,cross_val_score,GridSearchCV,cross_val_predict
+from sklearn.metrics import confusion_matrix,make_scorer,accuracy_score,matthews_corrcoef,roc_auc_score,recall_score,f1_score
+from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier,BaggingClassifier,AdaBoostClassifier
 from sklearn.feature_selection import mutual_info_classif,chi2,SelectKBest,RFECV,f_classif,SelectFromModel
-
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import LabelEncoder
-from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
-
 from xgboost import XGBClassifier
-
 from skrebate import ReliefF
-
 from mlxtend.feature_selection import SequentialFeatureSelector
-
-from imblearn.over_sampling import SMOTE
-
-from catboost import CatBoostClassifier, Pool
-
+from catboost import CatBoostClassifier
 from lightgbm.sklearn import LGBMClassifier
 
 import warnings
